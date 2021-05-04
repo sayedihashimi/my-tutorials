@@ -22,6 +22,7 @@ namespace ContosoUniversityModelBinding.Models {
         [EnumDataType(typeof(AcademicYear)), Display(Name ="Academic year")]
         public AcademicYear Year { get; set; }
         public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public bool IsHonorsStudent { get; set; }
     }
     public class Enrollment {
         [Key]
