@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ContosoUniversityModelBinding.Models {
     public class SchoolContext : DbContext {
-        public DbSet<Student> Student { get; set; }
+        public DbSet<Student> Students { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Course> Courses { get; set; }
     }
