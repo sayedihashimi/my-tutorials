@@ -194,6 +194,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105041657227_initial.cs" />
+    <Compile Include="Migrations\202105041657227_initial.designer.cs">
+      <DependentUpon>202105041657227_initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\UniversityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -239,6 +243,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105041657227_initial.resx">
+      <DependentUpon>202105041657227_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
