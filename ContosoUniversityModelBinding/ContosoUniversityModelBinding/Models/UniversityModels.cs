@@ -23,6 +23,7 @@ namespace ContosoUniversityModelBinding.Models {
         public AcademicYear Year { get; set; }
         public virtual ICollection<Enrollment> Enrollments { get; set; }
         public bool IsHonorsStudent { get; set; }
+        public string NickName { get; set; }
     }
     public class Enrollment {
         [Key]

@@ -387,6 +387,10 @@
     <Compile Include="Migrations\202105041840217_ishonors.designer.cs">
       <DependentUpon>202105041840217_ishonors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105041857520_Nickname.cs" />
+    <Compile Include="Migrations\202105041857520_Nickname.designer.cs">
+      <DependentUpon>202105041857520_Nickname.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\UniversityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -439,6 +443,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105041840217_ishonors.resx">
       <DependentUpon>202105041840217_ishonors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105041857520_Nickname.resx">
+      <DependentUpon>202105041857520_Nickname.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

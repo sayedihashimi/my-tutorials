@@ -22,7 +22,11 @@
                 <asp:Label Text="<%# Item.Enrollments.Sum(en => en.Course.Credits) %>" 
                     runat="server" />
               </ItemTemplate>
-            </asp:TemplateField>        
+            </asp:TemplateField>
+            <asp:DynamicField HeaderText="Nick Name" DataField="NickName"></asp:DynamicField>
+
         </Columns>
     </asp:GridView>
+
+    <asp:Button runat="server" Text="Add Student"/>
 </asp:Content>
