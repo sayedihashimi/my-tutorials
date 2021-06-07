@@ -30,6 +30,7 @@
             <asp:DynamicField DataField="FirstName" />
             <asp:DynamicField HeaderText="Nick Name" DataField="NickName"></asp:DynamicField>
             <asp:DynamicField HeaderText="Year" DataField="Year"></asp:DynamicField>
+            <asp:DynamicField DataField="EnrollmentDate" />
             <asp:TemplateField HeaderText="Total Credits">
                 <ItemTemplate>
                     <asp:Label Text="<%# Item.Enrollments.Sum(en => en.Course.Credits) %>"

@@ -399,6 +399,10 @@
     <Compile Include="Migrations\202105041857520_Nickname.designer.cs">
       <DependentUpon>202105041857520_Nickname.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106071921056_AddEnrollmentDate.cs" />
+    <Compile Include="Migrations\202106071921056_AddEnrollmentDate.designer.cs">
+      <DependentUpon>202106071921056_AddEnrollmentDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\UniversityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -454,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105041857520_Nickname.resx">
       <DependentUpon>202105041857520_Nickname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106071921056_AddEnrollmentDate.resx">
+      <DependentUpon>202106071921056_AddEnrollmentDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

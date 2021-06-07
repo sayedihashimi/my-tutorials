@@ -21,6 +21,11 @@ namespace ContosoUniversityModelBinding.Models {
         public string FirstName { get; set; }
         [EnumDataType(typeof(AcademicYear)), Display(Name ="Academic year")]
         public AcademicYear Year { get; set; }
+
+        [Range(typeof(DateTime), "1/1/2013", "1/1/3000", ErrorMessage = "Please provide an enrollment date after 1/1/2013")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
+        public DateTime EnrollmentDate { get; set; }
+
         public virtual ICollection<Enrollment> Enrollments { get; set; }
         public bool IsHonorsStudent { get; set; }
         public string NickName { get; set; }
