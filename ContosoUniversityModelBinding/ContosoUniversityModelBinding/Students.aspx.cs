@@ -7,15 +7,21 @@ using System.Web.UI.WebControls;
 using ContosoUniversityModelBinding.Models;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Web.ModelBinding;
 
 namespace ContosoUniversityModelBinding {
     public partial class Students : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
-        public IQueryable<Student> studentsGrid_GetData() {
-            var db = new SchoolContext();
+        public IQueryable<Student> studentsGrid_GetData([Control] AcademicYear? displayYear) {
+            SchoolContext db = new SchoolContext();
             var query = db.Students.Include(s => s.Enrollments.Select(e => e.Course));
+
+            if (displayYear != null) {
+                query = query.Where(s => s.Year == displayYear);
+            }
+
             return query;
         }
 
