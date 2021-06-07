@@ -5,6 +5,7 @@
 
     <asp:ValidationSummary ShowModelStateErrors="true" runat="server" />
     <br /><br />
+    <asp:HyperLink NavigateUrl="~/AddStudent" Text="Add New Student" runat="server" />
     <asp:Label runat="server" Text="Show:" />
     <asp:DropDownList runat="server" AutoPostBack="true" ID="DisplayYear">
         <asp:ListItem Text="All" Value="" />
@@ -41,6 +42,4 @@
 
         </Columns>
     </asp:GridView>
-
-    <asp:Button runat="server" Text="Add Student"/>
 </asp:Content>
