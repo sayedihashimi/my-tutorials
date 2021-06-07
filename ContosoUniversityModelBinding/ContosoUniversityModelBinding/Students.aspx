@@ -1,11 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Students.aspx.cs" Inherits="ContosoUniversityModelBinding.Students" %>
+﻿<%@ Page Title="Students" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Students.aspx.cs" Inherits="ContosoUniversityModelBinding.Students" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <h1>Students</h1>
 
     <asp:ValidationSummary ShowModelStateErrors="true" runat="server" />
     <asp:GridView runat="server" ID="studentsGrid"
-        ItemType="ContosoUniversityModelBinding.Models.Student" DataKeyNames="StudentID" 
+        ItemType="ContosoUniversityModelBinding.Models.Student" 
+        DataKeyNames="StudentID" 
         SelectMethod="studentsGrid_GetData"
         UpdateMethod="studentsGrid_UpdateItem"
         DeleteMethod="studentsGrid_DeleteItem"
@@ -16,14 +17,15 @@
             <asp:DynamicField DataField="StudentID" />
             <asp:DynamicField DataField="LastName" />
             <asp:DynamicField DataField="FirstName" />
-            <asp:DynamicField DataField="Year" />          
-            <asp:TemplateField HeaderText="Total Credits">
-              <ItemTemplate>
-                <asp:Label Text="<%# Item.Enrollments.Sum(en => en.Course.Credits) %>" 
-                    runat="server" />
-              </ItemTemplate>
-            </asp:TemplateField>
             <asp:DynamicField HeaderText="Nick Name" DataField="NickName"></asp:DynamicField>
+            <asp:DynamicField HeaderText="Year" DataField="Year"></asp:DynamicField>
+            <asp:TemplateField HeaderText="Total Credits">
+                <ItemTemplate>
+                    <asp:Label Text="<%# Item.Enrollments.Sum(en => en.Course.Credits) %>"
+                        runat="server" />
+
+                </ItemTemplate>
+            </asp:TemplateField>
 
         </Columns>
     </asp:GridView>
