@@ -1,17 +1,25 @@
-﻿@{
+﻿@using MyMvcWeb.Controllers
+@model List<Contact>
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<ul class="hmenu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Home</a></li>
+</ul>
 
 <address>
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
+
+<h3>Env vars</h3>
+<ul class="namelist">
+    @foreach (var x in Model) {
+        <li class="nameinlist"> @x </li>
+}
+</ul>
