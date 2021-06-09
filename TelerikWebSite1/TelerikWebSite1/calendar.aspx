@@ -4,8 +4,10 @@
     <link href="Styles/calendar.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FolderContent" runat="Server">
-    <telerik:RadCalendar runat="server" ID="RadCalendar1" Skin="Metro" EnableMultiSelect="false" DayNameFormat="FirstTwoLetters" 
-        SelectedDate="09/01/2015"  ShowRowHeaders="false" Width="220px"></telerik:RadCalendar>
+    <telerik:RadCalendar runat="server" ID="RadCalendar1" Skin="Metro" DayNameFormat="FirstTwoLetters"
+        SelectedDate="2015-09-01" ShowRowHeaders="false" Width="220px" EnableWeekends="True" FastNavigationNextText="<<" EnableMultiSelect="False">
+
+    </telerik:RadCalendar>
     <nav:FolderNavigationControl runat="server" ID="FolderNavigationControl" />
     <nav:MobileNavigation runat="server" ID="MobileNavigation"></nav:MobileNavigation>
 </asp:Content>

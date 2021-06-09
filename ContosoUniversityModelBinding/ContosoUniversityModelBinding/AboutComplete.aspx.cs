@@ -12,7 +12,7 @@ namespace ContosoUniversityModelBinding {
         }
 
         protected void MyButton_Click(object sender, EventArgs e) {
-            this.LabelSelectedValue.Text = this.mylistbox.SelectedValue;
+            this.LabelSelectedValue.Text = "The Big Lebowski";
         }
 
         protected void mylistbox_SelectedIndexChanged(object sender, EventArgs e) {

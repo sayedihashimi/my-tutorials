@@ -63,8 +63,8 @@
     </telerik:RadNavigation>
     <div class="scroller">
         <div class="gridWrapper">
-            <telerik:RadGrid runat="server" ID="messages" GridLines="None" Height="100%" OnNeedDataSource="messages_NeedDataSource"
-                AutoGenerateColumns="false" AllowMultiRowSelection="true" AllowSorting="true" AllowFilteringByColumn="false">
+            <telerik:RadGrid runat="server" ID="messages" Height="100%" OnNeedDataSource="messages_NeedDataSource"
+                AutoGenerateColumns="false" AllowMultiRowSelection="true" AllowSorting="true" AllowFilteringByColumn="True" AllowPaging="True">
                 <ClientSettings EnableRowHoverStyle="true" AllowKeyboardNavigation="false">
                     <Scrolling AllowScroll="true" UseStaticHeaders="true" />
                     <Selecting AllowRowSelect="true" />
