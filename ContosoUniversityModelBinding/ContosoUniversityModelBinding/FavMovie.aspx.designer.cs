@@ -10,7 +10,7 @@
 namespace ContosoUniversityModelBinding {
 
 
-    public partial class About {
+    public partial class FavMovie {
 
         /// <summary>
         /// mylistbox control.
