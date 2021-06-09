@@ -4,8 +4,10 @@
 
 <h2>Welcome</h2>
 
-<ul>
-    @for (int i = 0; i < ViewBag.NumTimes; i++) {
-        <li>@ViewBag.Message</li>
-    }
-</ul>
+<div class="row">
+    <ul>
+        @for (int i = 0; i < ViewBag.NumTimes; i++) {
+        <li>@i | @ViewBag.Message</li>
+        }
+    </ul>
+</div>

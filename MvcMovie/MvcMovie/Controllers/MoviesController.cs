@@ -19,7 +19,9 @@ namespace MvcMovie.Controllers
         {
             return View(db.Movies.ToList());
         }
-
+        public ActionResult MovieInfo() {
+            return View(db.Movies.ToList());
+        }
         // GET: Movies/Details/5
         public ActionResult Details(int? id)
         {

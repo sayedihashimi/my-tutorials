@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MvcMovie.Models.Movie>
+
+@{
+    ViewBag.Title = "MovieInfo";
+}
+
+<h2>MovieInfo</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+    @foreach(var m in Model) {
+<div>
+    title: @m.Title
+        @m.ReleaseDate
+        @m.Genre
+    </div>
+    }
+
+
