@@ -14,12 +14,12 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
     height: 100%;
-    line-height: 25vh;
 }
 
 div {
     background-color: dimgray;
     font-size: 10vmin;
-    line-height: 10vmin;
     text-align: center;
+    height: 25vh;
+    line-height: 25vh;
 }
