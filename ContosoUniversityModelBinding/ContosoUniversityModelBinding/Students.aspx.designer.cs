@@ -7,10 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ContosoUniversityModelBinding {
+namespace ContosoUniversityModelBinding
+{
 
 
-    public partial class Students {
+    public partial class Students
+    {
 
         /// <summary>
         /// DisplayYear control.
