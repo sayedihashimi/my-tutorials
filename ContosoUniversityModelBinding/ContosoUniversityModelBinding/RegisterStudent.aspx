@@ -17,7 +17,8 @@
         <li><asp:Label runat="server" Text="Home city"></asp:Label></li>
         <li>
             <asp:TextBox runat="server"></asp:TextBox></li>
-        <li></li>
+        <li><asp:Label runat="server" Text="Home state"></asp:Label></li>
         <li></li>
     </ul>
+    <asp:Button ID="ButtonRegister" runat="server" Text="Register"></asp:Button>
 </asp:Content>
