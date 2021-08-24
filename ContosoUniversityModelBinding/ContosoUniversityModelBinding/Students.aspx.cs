@@ -54,11 +54,5 @@ namespace ContosoUniversityModelBinding {
                 }
             }
         }
-
-        protected void studentsGrid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

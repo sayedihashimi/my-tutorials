@@ -41,5 +41,4 @@
 
         </Columns>
     </asp:GridView>
-    <p>Hello</p>
 </asp:Content>
