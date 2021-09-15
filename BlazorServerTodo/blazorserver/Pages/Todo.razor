@@ -1,4 +1,6 @@
 ﻿@page "/todo"
+@using System.Text.Json;
+@inject IWebHostEnvironment Environment
 
 <h1>Todo <span hidden="@(!(todos.Count(todo => !todo.IsDone) > 0))">(@todos.Count(todo => !todo.IsDone))</span></h1>
 
@@ -17,7 +19,21 @@
 
 @code {
     private List<TodoItem> todos = new();
-    private string newTodo;
+    private string? newTodo;
+
+    private string? todoFilePath;
+    protected override async Task OnInitializedAsync()
+    {
+        todoFilePath = Path.Combine(Environment.ContentRootPath,"wwwroot", "todo.json");
+        if (File.Exists(todoFilePath))
+        {
+            var str = await File.ReadAllTextAsync(todoFilePath);
+            if (!string.IsNullOrEmpty(str))
+            {
+                todos = JsonSerializer.Deserialize<List<TodoItem>>(str);    
+            }
+        }
+    }
 
     private void AddTodo()
     {
@@ -26,5 +42,14 @@
             todos.Add(new TodoItem { Title = newTodo });
             newTodo = string.Empty;
         }
+
+        // save to file
+        var path = Path.Combine(Environment.ContentRootPath,"wwwroot", "todo.json");
+        var jsonstr = JsonSerializer.Serialize(todos);
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        File.WriteAllText(path, jsonstr);
     }
 }
