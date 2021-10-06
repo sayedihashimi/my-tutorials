@@ -82,8 +82,8 @@ input[type=text] {
     font-weight: 600;
 }
 .todoRemoveButton {
-    content: url("/delete.svg");
     vertical-align: middle;
+    cursor: pointer;
 }
 .todolist {
     list-style-type: none;

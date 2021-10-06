@@ -64,5 +64,13 @@
     private void RemoveTodo(TodoItem item)
     {
         todos.Remove(item);
+        // save to file
+        var path = Path.Combine(Environment.ContentRootPath,"wwwroot", "todo.json");
+        var jsonstr = JsonSerializer.Serialize(todos);
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        File.WriteAllText(path, jsonstr);
     }
 }
