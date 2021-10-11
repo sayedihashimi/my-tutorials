@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Students" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Students.aspx.cs" Inherits="ContosoUniversityModelBinding.Students" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <h1>Students Enrolled</h1>
+    <h1>Students</h1>
     <p>All students that are currently enrolled are below.</p>
     <asp:ValidationSummary ShowModelStateErrors="true" runat="server" />
     <br />

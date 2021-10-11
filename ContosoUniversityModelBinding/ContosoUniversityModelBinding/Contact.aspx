@@ -13,5 +13,11 @@
     <address>
         <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
         <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+
+        <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:northwndConnectionString %>' SelectCommand="SELECT [EmployeeID], [LastName], [FirstName], [Title], [TitleOfCourtesy], [City], [Region], [PostalCode] FROM [Employees]"></asp:SqlDataSource>
     </address>
+    <div>
+        <p>Employees
+        </p>
+    </div>
 </asp:Content>
